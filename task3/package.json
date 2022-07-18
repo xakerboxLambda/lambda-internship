@@ -1,0 +1,17 @@
+{
+  "name": "task3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:message": "node telegramConsoleSender.js message 'Hello' ",
+    "test:photo": "node telegramConsoleSender.js photo 'https://imgv3.fotor.com/images/homepage-feature-card/Fotor-AI-photo-enhancement-tool-ru.jpg' ",
+    "start": "node telegramConsoleSender.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "dotenv": "^16.0.1"
+  }
+}
