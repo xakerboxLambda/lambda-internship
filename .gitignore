@@ -1,4 +1,4 @@
 node_modules
 /Basic Course/google-uploader/serviceAccount.json
 .env
-./DS_Store
+.DS_Store
