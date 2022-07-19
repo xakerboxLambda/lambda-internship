@@ -1,4 +1,4 @@
 node_modules
-/task7/serviceAccount.json
+serviceAccount.json
 .env
 .DS_Store
