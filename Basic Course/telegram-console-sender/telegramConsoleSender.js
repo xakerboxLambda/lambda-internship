@@ -9,8 +9,7 @@ const chatId = process.env.TG_CHAT_ID;
 function sendMessage(text) {
     https.get(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}`, (res) => { })
 }
-function sendPhoto
-    (text) {
+function sendPhoto (text) {
     https.get(`https://api.telegram.org/bot${token}/sendPhoto?chat_id=${chatId}&photo=${text}`, (res) => { })
 }
 function showHelp() {

@@ -9,10 +9,10 @@ import axios from "axios";
 
 const GOOGLE_FOLDER_ID = process.env.GOOGLE_FOLDER_ID;
 const TINY_URL_API_TOKEN = process.env.TINY_URL_API_TOKEN;
-
+const CREDENTIAL_FOR_SERVICE_ACCOUNT = process.env.CREDENTIAL_FOR_SERVICE_ACCOUNT;
 
 const auth = new GoogleAuth({
-  keyFile: './serviceAccount.json',
+  keyFile: CREDENTIAL_FOR_SERVICE_ACCOUNT,
   scopes: 'https://www.googleapis.com/auth/drive'
 });
 

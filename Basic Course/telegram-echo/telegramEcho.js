@@ -4,7 +4,6 @@ import axios from "axios";
 import TelegramBot from "node-telegram-bot-api";
 
 const token = process.env.TG_TOKEN;
-const chatId = process.env.TG_CHAT_ID;
 
 const bot = new TelegramBot(token, { polling: true });
 
@@ -15,9 +14,9 @@ bot.on('message', async (msg) => {
 
     if (text === 'photo') {
         const response = await axios.get('https://picsum.photos/200/300');
-        await bot.sendPhoto(chatId, response.request.res.responseUrl);
+        await bot.sendPhoto(msg.chat.id, response.request.res.responseUrl);
     } else {
-        await bot.sendMessage(chatId, `You just wrote: '${msg.text}'`);
+        await bot.sendMessage(msg.chat.id, `You just wrote: '${msg.text}'`);
     }
-    console.log(`Пользователь ${firstName} ${lastName} отправил: ${text}`);
+    console.log(`User ${firstName} ${lastName} sent: ${text}`);
 });
