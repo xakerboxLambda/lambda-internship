@@ -1,4 +1,4 @@
 node_modules
-serviceAccount.json
+/google-uploader/serviceAccount.json
 .env
 .DS_Store
