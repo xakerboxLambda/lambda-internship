@@ -78,7 +78,7 @@ async function main() {
             7) Для выхода из программы введите "exit"\n`);
 
     if (menuChoice === 'exit') {
-      console.log('Have a nice day!')
+      console.log('Have a nice day!');
       process.exit(0);
     }
 

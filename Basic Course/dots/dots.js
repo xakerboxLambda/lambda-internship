@@ -3,15 +3,15 @@ function dots(str) {
     let binaryMask = [];
 
     for (let i = 0; i < 2 ** (str.length - 1); i++) {
-        binaryMask.push(i.toString(2)); // 0, 1, 10, 11, ...
+        binaryMask.push(i.toString(2)); 
 
         while (binaryMask[i].length < str.length - 1) {
-            binaryMask[i] = '0' + binaryMask[i]; // 00, 01, 10, 11 ...
+            binaryMask[i] = '0' + binaryMask[i]; 
         }
-        binaryMask[i] = binaryMask[i].split(''); // [ ['0','0'], ['0','1'], ['1','0'], ['1','1'], ... ]
+        binaryMask[i] = binaryMask[i].split(''); 
     }
 
-    result = binaryMask.map(value => { // ['0','0']
+    result = binaryMask.map(value => { 
         let tmp = [];
 
         for (let i = 0; i < str.length; i++) {

@@ -1,7 +1,4 @@
 # Interective Sort
 
-Copy this file to your's dev environment
-
 # Order of execution
-1. Start your file with `node <YOUR_FILE_NAME>.js`
-
+1. To start current task run `node interactiveSort.js`

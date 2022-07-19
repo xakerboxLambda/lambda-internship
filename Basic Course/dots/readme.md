@@ -3,6 +3,5 @@
 It can place dots in words in all possible places
 
 # Order of execution
-1. Copy this file to your's dev environment
-1. Start your file with `node <YOUR_FILE_NAME>.js`
+1. To start current task run `node dots.js`
 

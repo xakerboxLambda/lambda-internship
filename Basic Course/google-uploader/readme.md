@@ -5,7 +5,7 @@ You can upload your photo to your google drive folder from console
 # Order of execution
 
 1. Copy code to your's dev environment
-2. Type in console `npm init`
+2. To install all packeges run `npm i`
 3. Create a Google Cloud project on\
 https://developers.google.com/workspace/guides/create-project
 4. Enable Google Workspace APIs on\
@@ -18,9 +18,8 @@ https://developers.google.com/workspace/guides/create-credentials#create_credent
 Download it
 
 7. Put your credentials for a service account to the same folder as the project
-8. In `.env.example` file delete `".example"` to make `.env`
-9. In your `.env` enter your **Google folder id**, **TinyUrl api token**, **Path to your credentials for a service account (./credential-name.json)**
-10. Open access to your google folder for everyone who has link\
+8. In your `.env` enter your **Google folder id**, **TinyUrl api token**, **Path to your credentials for a service account (./credential-name.json)**
+9. Open access to your google folder for everyone who has link\
 Add access to folder from credentials for a service account email\
 Service Account mail you can get at your json file\
 **"client_email": "<YOUR_EMAIL>",**
@@ -42,7 +41,3 @@ Service Account mail you can get at your json file\
 2. Create account
 3. Open settings -> api
 4. Create your api token
-
-#
->
-#

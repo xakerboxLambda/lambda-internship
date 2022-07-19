@@ -2,11 +2,10 @@
 
 In this programm you can see the primitive data base
 
-Here you add some new information and search information by user's name
+In this task you can add some information about user and search by list of created users
 
 # Order of execution
-1. Copy this file to your's dev environment
-2. Type in console `npm init`;
-3. Start your file with `npm run start <YOUR_FILE_NAME>.js`
+1. To install all packages `npm i`;
+2. To start current task run `npm run start`
 
 
