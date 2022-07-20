@@ -5,6 +5,15 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
+/* Старайся забить о конструкции function - это устаревший варик, юзай такой:
+const readUserInput = (rl, question) => {
+    ...your logic
+}
+
+Дабы код выглядил красиво, ты можешь вынести все эти функции, отвечающие за сортировку
+в отдельный файл, типа utils.js и затем экспортировать сюда. Так твой исполняемый файл 
+будет выглядеть значительно лучше.
+*/
 function readUserInput(rl, question) {
   return new Promise(resolve => {
     rl.question(question, resolve)
@@ -61,7 +70,9 @@ async function main() {
   while (true) {
     const answer = await readUserInput(rl, `Enter 10 words or digits dividing them in spaces: `);
 
-    answerArray = answer.split(/[ ]+/);
+    answerArray = answer.split(/[ ]+/); 
+    /* для создания массива тебе достаточно сделать answer.split(' ');, 
+     учитывая формат, в котором ты предложил вводить слова (т.е. через пробел) */
 
     if (answerArray.length !== 10) {
       console.log('You need to enter 10 words or digits. You entered only ' + answerArray.length);
@@ -92,6 +103,10 @@ async function main() {
       console.log('Please enter the number from 1 to 6 or \'exit\': ');
       continue;
     }
+    
+    /*
+    Вспоминаем за switch/case - тут тот самый случай. Старайся избегать в коде else, и, тем более else if. Это в крайних случаях.
+    */
 
     if (menuChoiceAsNumber === 1) {
       console.log(sortByAlphabet(answerArray));
