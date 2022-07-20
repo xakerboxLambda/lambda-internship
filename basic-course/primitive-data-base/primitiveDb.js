@@ -20,6 +20,10 @@ async function main() {
             break;
         }
 
+        
+        /*
+        Почему бы все вопросики не вытащить в отдельный модуль за пределы основного файла?;)
+        */
         inputQuestions = [{
             type: 'list',
             name: 'userGender',
@@ -42,6 +46,8 @@ async function main() {
         answerArray[i] = { ...answerArray[i], ...await inquirer.prompt(inputQuestions) }; //соеденяю два обьекта 
         i++;
     }
+    
+    // Put away from this file
 
     const isAgree = [
         {
@@ -68,7 +74,7 @@ async function main() {
 
         const foundElement = answerArray.filter(it => searchElementAnswer['searchName'] === it['userName'])
 
-        if (foundElement.length === 0) {
+        if (foundElement.length === 0) { // есть более милый вариант if (!foundElement.length) {...}
             console.log('Nothing was found');
             process.exit(0);
         } else{
